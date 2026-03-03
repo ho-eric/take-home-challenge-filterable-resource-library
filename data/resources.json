@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Ketogenic Diet Shows Promise for Bipolar Disorder",
+    "excerpt": "New pilot study demonstrates metabolic intervention may reduce mood episodes in treatment-resistant patients.",
+    "date": "2024-12-15",
+    "contentType": "Research Paper",
+    "condition": "Bipolar Disorder",
+    "author": "Dr. Christopher Palmer",
+    "url": "https://metabolicmind.org/research/bipolar-keto-study"
+  },
+  {
+    "id": 2,
+    "title": "Understanding Mitochondrial Function in Depression",
+    "excerpt": "Exploring how cellular energy metabolism influences depressive symptoms and treatment response.",
+    "date": "2024-11-28",
+    "contentType": "Article",
+    "condition": "Depression",
+    "author": "Dr. Georgia Ede",
+    "url": "https://metabolicmind.org/articles/mitochondria-depression"
+  },
+  {
+    "id": 3,
+    "title": "Patient Story: How Keto Changed My Life with Schizophrenia",
+    "excerpt": "A first-person account of managing schizophrenia symptoms through ketogenic therapy and medication.",
+    "date": "2024-12-01",
+    "contentType": "Patient Story",
+    "condition": "Schizophrenia",
+    "author": "Sarah Mitchell",
+    "url": "https://metabolicmind.org/stories/schizophrenia-recovery"
+  },
+  {
+    "id": 4,
+    "title": "Metabolic Therapy for Anxiety: A Clinical Overview",
+    "excerpt": "Comprehensive review of how metabolic interventions impact anxiety disorders and stress response.",
+    "date": "2024-10-15",
+    "contentType": "Article",
+    "condition": "Anxiety",
+    "author": "Dr. Bret Scher",
+    "url": "https://metabolicmind.org/articles/anxiety-metabolic-approach"
+  },
+  {
+    "id": 5,
+    "title": "Ketogenic Diet for Treatment-Resistant Depression: RCT",
+    "excerpt": "Randomized controlled trial examining ketogenic diet as adjunct therapy for major depressive disorder.",
+    "date": "2024-09-20",
+    "contentType": "Clinical Trial",
+    "condition": "Depression",
+    "author": "Dr. Shebani Sethi",
+    "url": "https://metabolicmind.org/trials/depression-keto-rct"
+  },
+  {
+    "id": 6,
+    "title": "The Brain Energy Theory of Mental Illness",
+    "excerpt": "Dr. Palmer explains his groundbreaking framework connecting metabolism and mental health disorders.",
+    "date": "2024-11-10",
+    "contentType": "Video",
+    "condition": "General Mental Health",
+    "author": "Dr. Christopher Palmer",
+    "url": "https://metabolicmind.org/videos/brain-energy-theory"
+  },
+  {
+    "id": 7,
+    "title": "ADHD and Blood Sugar: The Connection You Need to Know",
+    "excerpt": "New research reveals how glucose metabolism affects attention, focus, and executive function.",
+    "date": "2024-08-12",
+    "contentType": "Article",
+    "condition": "ADHD",
+    "author": "Dr. Robert Lustig",
+    "url": "https://metabolicmind.org/articles/adhd-blood-sugar"
+  },
+  {
+    "id": 8,
+    "title": "Pilot Study: Ketogenic Therapy for Bipolar I Disorder",
+    "excerpt": "First-ever clinical trial investigating ketogenic diet as treatment for bipolar disorder shows promising results.",
+    "date": "2024-12-20",
+    "contentType": "Clinical Trial",
+    "condition": "Bipolar Disorder",
+    "author": "Dr. Iain Campbell",
+    "url": "https://metabolicmind.org/trials/bipolar-pilot-study"
+  },
+  {
+    "id": 9,
+    "title": "My Journey from Panic Attacks to Peace",
+    "excerpt": "How a ketogenic diet helped me overcome debilitating anxiety after years of failed treatments.",
+    "date": "2024-10-05",
+    "contentType": "Patient Story",
+    "condition": "Anxiety",
+    "author": "Michael Torres",
+    "url": "https://metabolicmind.org/stories/anxiety-recovery"
+  },
+  {
+    "id": 10,
+    "title": "Metabolic Psychiatry: A New Paradigm",
+    "excerpt": "Comprehensive overview of how metabolic approaches are transforming mental health treatment.",
+    "date": "2024-07-22",
+    "contentType": "Research Paper",
+    "condition": "General Mental Health",
+    "author": "Dr. Georgia Ede",
+    "url": "https://metabolicmind.org/research/metabolic-psychiatry-paradigm"
+  },
+  {
+    "id": 11,
+    "title": "Ketogenic Diet and Schizophrenia: Case Series",
+    "excerpt": "Four case studies document significant symptom reduction in schizophrenia patients using ketogenic therapy.",
+    "date": "2024-06-18",
+    "contentType": "Research Paper",
+    "condition": "Schizophrenia",
+    "author": "Dr. Christopher Palmer",
+    "url": "https://metabolicmind.org/research/schizophrenia-case-series"
+  },
+  {
+    "id": 12,
+    "title": "Nutrition and ADHD: What Parents Should Know",
+    "excerpt": "Evidence-based guide to dietary interventions for attention deficit hyperactivity disorder.",
+    "date": "2024-09-08",
+    "contentType": "Video",
+    "condition": "ADHD",
+    "author": "Dr. Uma Naidoo",
+    "url": "https://metabolicmind.org/videos/adhd-nutrition-guide"
+  },
+  {
+    "id": 13,
+    "title": "From Bedbound to Thriving: My Depression Story",
+    "excerpt": "After 15 years of treatment-resistant depression, I found hope through metabolic therapy.",
+    "date": "2024-11-02",
+    "contentType": "Patient Story",
+    "condition": "Depression",
+    "author": "Jennifer Walsh",
+    "url": "https://metabolicmind.org/stories/depression-recovery"
+  },
+  {
+    "id": 14,
+    "title": "Insulin Resistance and Mental Health Disorders",
+    "excerpt": "Research reveals strong correlation between metabolic dysfunction and psychiatric conditions.",
+    "date": "2024-08-30",
+    "contentType": "Article",
+    "condition": "General Mental Health",
+    "author": "Dr. Ben Bikman",
+    "url": "https://metabolicmind.org/articles/insulin-resistance-mental-health"
+  },
+  {
+    "id": 15,
+    "title": "Ketogenic Diet Trial for ADHD in Children",
+    "excerpt": "Ongoing clinical trial investigating ketogenic intervention for pediatric attention deficit disorder.",
+    "date": "2024-10-25",
+    "contentType": "Clinical Trial",
+    "condition": "ADHD",
+    "author": "Dr. Emily Deans",
+    "url": "https://metabolicmind.org/trials/adhd-children-study"
+  },
+  {
+    "id": 16,
+    "title": "Managing Bipolar Disorder Through Diet: A Clinician's Guide",
+    "excerpt": "Practical protocols for implementing metabolic therapies in bipolar disorder treatment.",
+    "date": "2024-07-14",
+    "contentType": "Video",
+    "condition": "Bipolar Disorder",
+    "author": "Dr. Shebani Sethi",
+    "url": "https://metabolicmind.org/videos/bipolar-clinical-guide"
+  },
+  {
+    "id": 17,
+    "title": "The Gut-Brain Connection in Anxiety Disorders",
+    "excerpt": "How the microbiome and metabolic health influence anxiety symptoms and treatment outcomes.",
+    "date": "2024-05-20",
+    "contentType": "Research Paper",
+    "condition": "Anxiety",
+    "author": "Dr. Emeran Mayer",
+    "url": "https://metabolicmind.org/research/gut-brain-anxiety"
+  },
+  {
+    "id": 18,
+    "title": "Living Well with Schizophrenia: My Metabolic Journey",
+    "excerpt": "Personal account of achieving remission through ketogenic diet and comprehensive metabolic care.",
+    "date": "2024-09-15",
+    "contentType": "Patient Story",
+    "condition": "Schizophrenia",
+    "author": "David Kim",
+    "url": "https://metabolicmind.org/stories/schizophrenia-remission"
+  },
+  {
+    "id": 19,
+    "title": "Ketones and Brain Health: The Science Explained",
+    "excerpt": "Understanding how ketone bodies support neurological function and mental health.",
+    "date": "2024-11-18",
+    "contentType": "Article",
+    "condition": "General Mental Health",
+    "author": "Dr. Dominic D'Agostino",
+    "url": "https://metabolicmind.org/articles/ketones-brain-health"
+  },
+  {
+    "id": 20,
+    "title": "Metabolic Approaches to Treatment-Resistant Depression",
+    "excerpt": "Clinical trial examining ketogenic diet efficacy in patients who haven't responded to standard treatments.",
+    "date": "2024-12-08",
+    "contentType": "Clinical Trial",
+    "condition": "Depression",
+    "author": "Dr. Christopher Palmer",
+    "url": "https://metabolicmind.org/trials/trd-metabolic-study"
+  }
+]
