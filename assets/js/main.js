@@ -29,10 +29,17 @@ function renderResources(resources) {
         clone.querySelector('.post-date').textContent = new Date(item.date).toLocaleDateString();
         clone.querySelector('.resource-title').textContent = item.title;
         clone.querySelector('.resource-excerpt').textContent = item.excerpt;
-        clone.querySelector('.read-more').textContent = item.url;
+        clone.querySelector('.resource-content-type').textContent = item.contentType;
+        clone.querySelector('.resource-condition').textContent = item.condition;
+        clone.querySelector('.resource-author').textContent = item.author;
+        clone.querySelector('.read-more').href = item.url;
 
         grid.appendChild(clone);
     });
+}
+
+function applyFilters() {
+    
 }
 
 loadResources();
