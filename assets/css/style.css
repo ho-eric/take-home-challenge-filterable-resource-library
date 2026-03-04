@@ -1,25 +1,42 @@
 body {
-    background-color: lightblue;
+    background-color: #F2F0EF;
     color: black;
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
     line-height: 1.5;
     padding: 5rem;
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 1.5rem;
+  }
 }
 
 .resource-card {
     background: white;
     border: 1px solid #e2e8f0;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     padding: 1rem;
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
-.resource-card :hover {
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
 
+.resource-content-type {
+    color: #11544f;
 }
 
 #resource-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
     padding: 1rem 0;
+}
+
+.read-more {
+    text-decoration: none;
 }
