@@ -45,6 +45,7 @@
             <section class="filter-group">
                 <h3>Sort By</h3>
                 <select id="sort-select">
+                    <option value="none">-</option>
                     <option value="newest">Newest First</option>
                     <option value="oldest">Oldest First</option>
                     <option value="alpha">A - Z</option>
@@ -54,17 +55,16 @@
         </aside>
 
         <main class="results-area">
-            <header class="results-header">
+            <!-- <header class="results-header">
                 <span id="result-count">Showing 0 of 0 resources</span>
-            </header>
+            </header> -->
             
             <div id="resource-grid" class="grid">
-
             </div>
 
-            <div id="no-results" class="hidden">
+            <!-- <div id="no-results" class="hidden">
                 <p>No resources match your criteria. Try resetting your filters.</p>
-            </div>
+            </div> -->
         </main>
     </div>
 
@@ -76,8 +76,10 @@
             </header>
             <h2 class="resource-title"></h2>
             <p class="resource-excerpt"></p>
-            <div class="resource-tags"></div>
-            <a href="#" class="read-more">View Resource</a>
+            <p class="resource-content-type"></p>
+            <p class="resource-condition"></p>
+            <p class="resource-author"></p>
+            <a href="" class="read-more">View Resource</a>
         </article>
     </template>
 
