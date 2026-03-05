@@ -164,7 +164,6 @@ body {
     background-color: #11544f;
     color: white;
     font-size: .9rem;
-    transform: skew(-10deg);
     align-items: center;
     align-self: flex-start;
     justify-content: center;
