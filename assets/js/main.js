@@ -9,14 +9,24 @@ const state = {
     }
 };
 
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+
 async function loadResources() {
+    const loadingIndicator = document.getElementById("loading-indicator")
+    loadingIndicator.innerHTML = '<span class="loading-dots">Loading resources</span>';
+
     try {
         const response = await fetch('./data/resources.json');
+
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        await sleep(750);
         const data = await response.json();
         state.resources = data;
-        initEventListeners();
         renderResources(state.resources);
+        loadingIndicator.innerHTML = '';
     } catch (error) {
+        loadingIndicator.innerHTML = 'Failed to load resources';
         console.error("Failed to load resources:", error);
     }
 }
@@ -28,7 +38,7 @@ function renderResources(resources) {
     grid.innerHTML = ''; // resets the grid 
 
     if(resources.length === 0) {
-        countDisplay.textContent = "No results found";
+        countDisplay.textContent = "No results found, please try adjusting the filters or search terms";
     } else {
         countDisplay.textContent = `Showing ${resources.length}  of ${state.resources.length} results`;
     }
@@ -114,4 +124,5 @@ function sanitizeInputField(str) {
     return str.trim().toLowerCase();    
 }
 
+initEventListeners();
 loadResources();
