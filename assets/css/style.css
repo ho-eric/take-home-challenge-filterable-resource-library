@@ -30,11 +30,19 @@ body {
     padding: 1rem;
     transition: transform 0.25s ease;
     cursor: pointer;
+    height: 100%;
 }
 
 .resource-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.card-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
 }
 
 .resource-content-type,
@@ -53,8 +61,4 @@ body {
 .resource-condition {
     background-color:#388b86;
     color: black;
-}
-
-.read-more {
-    text-decoration: none;
 }

@@ -69,18 +69,19 @@
     </div>
 
     <template id="card-template">
-        <article class="resource-card">
-            <header>
-                <span class="type-badge"></span>
-                <time class="post-date"></time>
-            </header>
-            <h2 class="resource-title"></h2>
-            <p class="resource-excerpt"></p>
-            <span class="resource-content-type"></span>
-            <span class="resource-condition"></span>
-            <p class="resource-author"></p>
-            <a href="" class="read-more" target="_blank" rel="noopener noreferrer">View Resource</a>
-        </article>
+        <a href="" class="card-link-wrapper" target="_blank" rel="noopener noreferrer">
+            <article class="resource-card">
+                <header>
+                    <time class="post-date"></time>
+                </header>
+                <h2 class="resource-title"></h2>
+                <p class="resource-excerpt"></p>
+                <span class="resource-content-type"></span>
+                <span class="resource-condition"></span>
+                <p class="resource-author"></p>
+                <span class="view-resource-btn">View Resource →</span>
+            </article>
+        </a>
     </template>
 
     <script src="assets/js/main.js"></script>
