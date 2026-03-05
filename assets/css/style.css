@@ -53,12 +53,22 @@ body {
     align-self: flex-start;
     color: white;
     background-color: #11544f;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     padding: .5rem 1rem;
     margin: .25rem 0;
+    transform: skew(-10deg);
+    font-size: .9rem;
 }
 
 .resource-condition {
     background-color:#388b86;
     color: black;
+}
+
+.view-resource-btn {
+    
+}
+
+.filter-tag-row {
+    display: flex;
 }
