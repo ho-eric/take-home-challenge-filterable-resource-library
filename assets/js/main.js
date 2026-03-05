@@ -49,13 +49,14 @@ function renderResources(resources) {
 }
 
 function applyFilters() {
+    const query = state.filters.search.toLowerCase();
 
     state.filteredResources = state.resources.filter(item => {
         const matchesContentType = state.filters.contentType.length === 0 || state.filters.contentType.includes(item.contentType);
-        
         const matchesCondition = state.filters.conditions.length === 0 || state.filters.conditions.includes(item.condition);
+        const matchesSearch = query === '' || item.title.toLowerCase().includes(query) || item.excerpt.toLowerCase().includes(query);
 
-        return matchesContentType && matchesCondition;
+        return matchesContentType && matchesCondition && matchesSearch;
     });
 
     filterResults();
@@ -82,6 +83,7 @@ function filterResults() {
 function initEventListeners() {
     const filters = document.querySelector('.filters-sidebar');
     const sortSelect = document.querySelector('#sort-select');
+    const searchBar = document.querySelector('#search-input');
 
     filters.addEventListener('change', (e) => {
         state.filters.contentType = Array.from(document.querySelectorAll('#content-type-filters input:checked')).map(cb => cb.value);
@@ -91,6 +93,11 @@ function initEventListeners() {
 
     sortSelect.addEventListener('change', (e) => {
         state.filters.sort = e.target.value;
+        applyFilters();
+    })
+
+    searchBar.addEventListener('input', (e) => {
+        state.filters.search = e.target.value;
         applyFilters();
     })
 }
