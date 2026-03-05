@@ -1,9 +1,11 @@
 const state = {
     resources: [],
+    filteredResources: [],
     filters: {
         search: '',
-        types: [],
-        sort: 'newest'
+        contentType: [],
+        condition: [],
+        sort: 'all'
     }
 };
 
@@ -12,6 +14,7 @@ async function loadResources() {
         const response = await fetch('./data/resources.json');
         const data = await response.json();
         state.resources = data;
+        initEventListeners();
         renderResources(state.resources);
     } catch (error) {
         console.error("Failed to load resources:", error);
@@ -22,6 +25,13 @@ function renderResources(resources) {
     const grid = document.getElementById('resource-grid');
     const template = document.getElementById('card-template');
     const countDisplay = document.getElementById('result-count');
+    grid.innerHTML = ''; // resets the grid 
+
+    if(resources.length === 0) {
+        countDisplay.textContent = "No results found";
+    } else {
+        countDisplay.textContent = `Showing ${resources.length}  of ${state.resources.length} results`;
+    }
 
     resources.forEach(item => {
         const clone = template.content.cloneNode(true);
@@ -39,7 +49,50 @@ function renderResources(resources) {
 }
 
 function applyFilters() {
-    
+
+    state.filteredResources = state.resources.filter(item => {
+        const matchesContentType = state.filters.contentType.length === 0 || state.filters.contentType.includes(item.contentType);
+        
+        const matchesCondition = state.filters.conditions.length === 0 || state.filters.conditions.includes(item.condition);
+
+        return matchesContentType && matchesCondition;
+    });
+
+    filterResults();
+    renderResources(state.filteredResources);
+}
+
+function filterResults() {
+    const { sort } = state.filters;
+
+    state.filteredResources.sort((a, b) => {
+        if(sort === "newest") {
+            return new Date(b.date) - new Date(a.date);
+        } else if(sort === "oldest") {
+            return new Date(a.date) - new Date(b.date);
+        } else if (sort === "alpha") {
+            return a.title.localeCompare(b.title);
+        } else if(sort === "alphaRev") {
+            return b.title.localeCompare(a.title);
+        }
+        return 0;
+    });
+}
+
+function initEventListeners() {
+    const filters = document.querySelector('.filters-sidebar');
+    const sortSelect = document.querySelector('#sort-select');
+
+    filters.addEventListener('change', (e) => {
+        state.filters.contentType = Array.from(document.querySelectorAll('#content-type-filters input:checked')).map(cb => cb.value);
+        state.filters.conditions = Array.from(document.querySelectorAll('#condition-filters input:checked')).map(cb => cb.value);
+        applyFilters();
+    });
+
+    sortSelect.addEventListener('change', (e) => {
+        state.filters.sort = e.target.value;
+        applyFilters();
+    })
 }
 
 loadResources();
