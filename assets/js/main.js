@@ -50,7 +50,7 @@ function renderResources(resources) {
 }
 
 function applyFilters() {
-    const query = state.filters.search.toLowerCase();
+    const query = state.filters.search.trim().toLowerCase();
 
     state.filteredResources = state.resources.filter(item => {
         const matchesContentType = state.filters.contentType.length === 0 || state.filters.contentType.includes(item.contentType);
@@ -85,6 +85,7 @@ function initEventListeners() {
     const filters = document.querySelector('.filters-sidebar');
     const sortSelect = document.querySelector('#sort-select');
     const searchBar = document.querySelector('#search-input');
+    let debounceTimer;
 
     filters.addEventListener('change', (e) => {
         state.filters.contentType = Array.from(document.querySelectorAll('#content-type-filters input:checked')).map(cb => cb.value);
@@ -98,9 +99,19 @@ function initEventListeners() {
     })
 
     searchBar.addEventListener('input', (e) => {
-        state.filters.search = e.target.value;
-        applyFilters();
+        clearTimeout(debounceTimer); // Reset the timer every time they hit a key
+    
+        debounceTimer = setTimeout(() => {
+            state.filters.search = e.target.value.trim().toLowerCase();
+            applyFilters();
+        }, 300); // Wait 300ms after the last keystroke
     })
+}
+
+function sanitizeInputField(str) {
+    const temp = document.createElement('div');
+    temp.textContent = str;
+    return str.trim().toLowerCase();    
 }
 
 loadResources();
