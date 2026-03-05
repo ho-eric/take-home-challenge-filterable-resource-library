@@ -21,7 +21,7 @@
 
             <section class="filter-group">
                 <h3>Content Type</h3>
-                <div id="type-filters">
+                <div id="content-type-filters">
                     <label><input type="checkbox" value="Article"> Article</label>
                     <label><input type="checkbox" value="Video"> Video</label>
                     <label><input type="checkbox" value="Research Paper"> Research Paper</label>
@@ -32,9 +32,9 @@
 
             <section class="filter-group">
                 <h3>Condition</h3>
-                <div id="type-filters">
+                <div id="condition-filters">
                     <label><input type="checkbox" value="Depression"> Depression</label>
-                    <label><input type="checkbox" value=" Bipolar Disorder">  Bipolar Disorder</label>
+                    <label><input type="checkbox" value="Bipolar Disorder">  Bipolar Disorder</label>
                     <label><input type="checkbox" value="Schizophrenia"> Schizophrenia</label>
                     <label><input type="checkbox" value="Anxiety"> Anxiety</label>
                     <label><input type="checkbox" value="ADHD"> ADHD</label>
@@ -45,19 +45,19 @@
             <section class="filter-group">
                 <h3>Sort By</h3>
                 <select id="sort-select">
-                    <option value="none">-</option>
+                    <option value="all">All</option>
                     <option value="newest">Newest First</option>
                     <option value="oldest">Oldest First</option>
-                    <option value="alpha">A - Z</option>
-                    <option value="alphaRev">Z - A</option>
+                    <option value="alpha">Title (A - Z)</option>
+                    <option value="alphaRev">Title (Z - A)</option>
                 </select>
             </section>
         </aside>
 
         <main class="results-area">
-            <!-- <header class="results-header">
-                <span id="result-count">Showing 0 of 0 resources</span>
-            </header> -->
+            <header class="results-header">
+                <h4 class="result-count" id="result-count">Showing 0 of 0 resources</h4>
+            </header>
             
             <div id="resource-grid" class="grid">
             </div>
@@ -76,10 +76,10 @@
             </header>
             <h2 class="resource-title"></h2>
             <p class="resource-excerpt"></p>
-            <p class="resource-content-type"></p>
-            <p class="resource-condition"></p>
+            <span class="resource-content-type"></span>
+            <span class="resource-condition"></span>
             <p class="resource-author"></p>
-            <a href="" class="read-more">View Resource</a>
+            <a href="" class="read-more" target="_blank" rel="noopener noreferrer">View Resource</a>
         </article>
     </template>
 
