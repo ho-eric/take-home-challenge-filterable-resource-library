@@ -14,9 +14,10 @@
 
     <div class="container library-wrapper">
         <aside class="filters-sidebar">
-            <section class="filter-group">
-                <label for="search-input">Search Resources</label>
-                <input type="text" id="search-input" placeholder="Search">
+            <section class="filter-group search-container">
+                <!-- <label for="search-input">Search Resources</label> -->
+                 <span class="search-icon">🔎</span>
+                <input type="text" id="search-input" placeholder="Search Resources">
             </section>
 
             <section class="filter-group">
@@ -44,13 +45,16 @@
 
             <section class="filter-group">
                 <h3>Sort By</h3>
-                <select id="sort-select">
-                    <option value="all">All</option>
-                    <option value="newest">Newest First</option>
-                    <option value="oldest">Oldest First</option>
-                    <option value="alpha">Title (A - Z)</option>
-                    <option value="alphaRev">Title (Z - A)</option>
-                </select>
+                <div class="select-wrapper">
+                    <select id="sort-select">
+                        <option value="all">All</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="alpha">Title (A - Z)</option>
+                        <option value="alphaRev">Title (Z - A)</option>
+                    </select>
+                    <span class="arrow-icon"></span>
+                </div>
             </section>
         </aside>
 
@@ -58,18 +62,13 @@
             <header class="results-header">
                 <h4 class="result-count" id="result-count">Showing 0 of 0 resources</h4>
             </header>
-            
             <div id="resource-grid" class="grid">
             </div>
-
-            <!-- <div id="no-results" class="hidden">
-                <p>No resources match your criteria. Try resetting your filters.</p>
-            </div> -->
         </main>
     </div>
 
     <template id="card-template">
-        <a href="" class="card-link-wrapper" target="_blank" rel="noopener noreferrer">
+        <a href="" class="card-link-wrapper" target="_blank" rel="noopener noreferrer" aria-label="">
             <article class="resource-card">
                 <header>
                     <time class="post-date"></time>
@@ -77,11 +76,11 @@
                 <h2 class="resource-title"></h2>
                 <p class="resource-excerpt"></p>
                 <div class="filter-tag-row">
-                <span class="resource-content-type"></span>
-                <span class="resource-condition"></span>
+                    <span class="resource-content-type"></span>
+                    <span class="resource-condition"></span>
                 </div>
                 <p class="resource-author"></p>
-                <span class="view-resource-btn">View Resource →</span>
+                <span class="view-resource-btn">View Resource</span>
             </article>
         </a>
     </template>

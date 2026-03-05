@@ -12,6 +12,34 @@ body {
     }
 }
 
+#search-input {
+    padding: 10px 20px 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    flex-grow: 1;
+}
+
+#search-input:focus {
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+    left: 12px;
+    position: absolute;
+    pointer-events: nonex;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
 #resource-grid {
     display: grid;
     padding: 1rem 0;
@@ -57,18 +85,91 @@ body {
     align-items: center;
     align-self: flex-start;
     justify-content: center;
-    /* margin-right: -.5px; */
 }
 
 .resource-condition {
-    background-color: #388b86;
-    color: black;
+    background-color: #267d78;
 }
 
-.view-resource-btn {}
+.view-resource-btn {
+    display: flex;
+    margin-top: auto;
+    color: #11544f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.view-resource-btn::before,
+.view-resource-btn::after {
+    height: 1px;
+    width: 0;
+    background-color: currentColor;
+    opacity: 0.5;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    content: '';
+}
+
+.view-resource-btn::before,
+.view-resource-btn::after {
+    width: 20px;
+}
+
+.card-link-wrapper:hover .view-resource-btn {
+    color: #267d78;
+}
+
+.card-link-wrapper:hover .view-resource-btn::before,
+.card-link-wrapper:hover .view-resource-btn::after {
+    width: 40px;
+    opacity: 1;
+}
 
 .filter-tag-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+select {
+    padding: 10px 40px 10px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+select:hover {
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+select:active {
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 }
