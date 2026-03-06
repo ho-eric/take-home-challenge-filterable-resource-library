@@ -20,7 +20,7 @@ async function loadResources() {
 
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-        await sleep(750);
+        await sleep(750); // Creates an artificial 750ms delay to simulate loading in the resources
         const data = await response.json();
         state.resources = data;
         renderResources(state.resources);
@@ -35,7 +35,7 @@ function renderResources(resources) {
     const grid = document.getElementById('resource-grid');
     const template = document.getElementById('card-template');
     const countDisplay = document.getElementById('result-count');
-    grid.innerHTML = ''; // resets the grid 
+    grid.innerHTML = ''; // Resets the grid so that the cards will not keep adding up as new filters are selected
 
     if(resources.length === 0) {
         countDisplay.textContent = "No results found, please try adjusting the filters or search terms";
@@ -43,6 +43,7 @@ function renderResources(resources) {
         countDisplay.textContent = `Showing ${resources.length}  of ${state.resources.length} results`;
     }
 
+    // Injects the resource data into the card template
     resources.forEach(item => {
         const clone = template.content.cloneNode(true);
         const cardLinkWrapper = clone.querySelector('.card-link-wrapper');
@@ -108,6 +109,7 @@ function initEventListeners() {
         applyFilters();
     })
 
+    // Adds debounce to not overload the system if there are more items in the resources.json
     searchBar.addEventListener('input', (e) => {
         clearTimeout(debounceTimer); // Reset the timer every time they hit a key
     
