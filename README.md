@@ -5,7 +5,7 @@ I used VS Code along with the Live Preview plugin for the development of this pr
 
 Additionally, I have also created a website that is deployed from this repo here:  https://ho-eric.github.io/take-home-challenge-filterable-resource-library/
 
-I tested the website across many different browers, from Chrome to Firefox to Safari, from my desktop to Macbook to Android and Apple device.
+I tested the website across many different browers and devices, from Chrome to Firefox to Safari, from my desktop to Macbook to Android and Apple device.
 
 One assumption I made was that as the default state, with no filters or search term entered, the site would show ALL of the resources.
 
