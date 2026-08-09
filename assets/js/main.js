@@ -4,7 +4,7 @@ const state = {
     filters: {
         search: '',
         contentType: [],
-        condition: [],
+        conditions: [],
         sort: 'all'
     }
 };
