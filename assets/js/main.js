@@ -120,11 +120,5 @@ function initEventListeners() {
     })
 }
 
-function sanitizeInputField(str) {
-    const temp = document.createElement('div');
-    temp.textContent = str;
-    return str.trim().toLowerCase();    
-}
-
 initEventListeners();
 loadResources();
